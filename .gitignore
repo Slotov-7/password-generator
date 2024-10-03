@@ -2,7 +2,8 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-gerador de senhas.iml
+.idea/password_generator.iml
+
 .idea/
 
 ### Eclipse ###
