@@ -28,8 +28,6 @@ public class GerarSenha {
 
                 "]", ";", ":", "<", ">", ",", "£"};
 
-
-
         Scanner sr = new Scanner(System.in);
 
         Random rom = new Random();
@@ -51,15 +49,6 @@ public class GerarSenha {
             senha[senha.length - 1] = caracteres[posicao];
 
         }
-
-
-
         System.out.println(String.join("", senha));
-
-
-
-
-
     }
-
 }
