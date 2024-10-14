@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 
 
-public class GerarSenha {
+public class PasswordGenerator {
 
     public static void main(String[] args) {
 
-        int qtdCaracteres;
+        int qtyCharacters;
 
-        String[] caracteres = new String[] { "0", "1", "2", "4", "5", "6",
+        String[] characters = new String[] { "0", "1", "2", "4", "5", "6",
 
                 "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i",
 
@@ -28,27 +28,27 @@ public class GerarSenha {
 
                 "]", ";", ":", "<", ">", ",", "£"};
 
-        Scanner sr = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        Random rom = new Random();
+        Random random = new Random();
 
-        System.out.println("Digite o tamanho da senha: ");
+        System.out.println("Enter password length: ");
 
-        qtdCaracteres = sr.nextInt();
+        qtyCharacters = sr.nextInt();
 
-        String[] senha = new String[0];
+        String[] password = new String[0];
 
         sr.close();
 
-        for(int i = 1; i <= qtdCaracteres; i++) {
+        for(int i = 1; i <= qtyCharacters; i++) {
 
-            int posicao = rom.nextInt(caracteres.length);
+            int position = rom.nextInt(characters.length);
 
-            senha = Arrays.copyOf(senha, senha.length + 1);
+           password = Arrays.copyOf(password, password.length + 1);
 
-            senha[senha.length - 1] = caracteres[posicao];
+            password[password.length - 1] = characters[position];
 
         }
-        System.out.println(String.join("", senha));
+        System.out.println(String.join("", password));
     }
 }
